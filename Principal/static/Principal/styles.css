@@ -1,0 +1,368 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* -------------------- LOGIN ------------------- */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+
+*{box-sizing:border-box;}
+
+
+
+.intro{
+    background-image: url("img/wallpaper.jpg");
+    height: 46em;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+body {
+    font-family: 'open sans', helvetica, arial;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.log-form {
+    width: 40%;
+    min-width: 320px;
+    max-width: 475px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  
+    box-shadow: 0px 2px 5px rgba(0,0,0,.25);
+
+}
+  
+form {
+    display: block;
+    width: 100%;
+    padding: 2em;
+}
+
+
+.myCustomTitleLogIn {
+    width: 100%;
+    color: white !important;
+    font-family: 'open sans condensed';
+    font-size: 1.35em;
+    display: block;
+    background:#2a2a2a;
+    width: 100%;
+    text-transform: uppercase;
+    padding: .75em 1em .75em 1.5em;
+    box-shadow:inset 0px 1px 1px fadeout(white, 95%);
+    border: 1px solid darken(#2a2a2a, 5%);
+    text-shadow: 0px 1px 1px darken(#2a2a2a, 5%);
+    margin: 0;
+    font-weight: 200;
+}
+  
+  input {
+    display: block;
+    margin: auto auto;
+    width: 100%;
+    margin-bottom: 2em;
+    padding: .5em 0;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 1.25em;
+    color: #757575;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #1fb5bf;
+    border: 1px solid darken(#1fb5bf, 5%);
+    padding: .5em 2em;
+    color: white;
+    margin-right: .5em;
+    box-shadow: inset 0px 1px 0px fadeout(white, 80%);
+    cursor: pointer;
+  }
+
+  .btn:hover{
+    background: lighten(#1fb5bf, 5%);
+  }
+  
+  .btn:active{
+    background: #1fb5bf; 
+    box-shadow: inset 0px 1px 1px fadeout(black, 90%);
+  }
+  .btn:focus{
+    background: lighten(#1fb5bf, 5%) !important;
+  }
+
+  .myCustomCreateAc {
+      text-align: center;
+      color: black;
+  }
+  
+
+/* NAV */
+
+.logo {
+    width: 100px !important;
+    border-radius: 100%;
+    border: black;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.login{
+    display: flex;
+    width: 40px;
+    position: fixed;
+    right: 0;
+    margin-right: 20px;
+    margin-top: -4.5rem;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.myCustoma{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    margin-top: -4rem;
+}
+
+.myCustomLogOutP{
+    display: flex;
+    width: 50px;
+    position: fixed;
+    right: 0;
+    color: white;
+    margin-right: 50px;
+    margin-top: -4.5rem;
+}
+  
+
+.myCustomNavTitle{
+    font-size: 2rem;
+    color: white;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 70px;
+    background-color:#022F40;
+}
+
+nav .logo {
+    float: left;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+/* -----------------CARROUSEL -------------- */
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  padding-top: 5rem;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img {
+    max-height: 400px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* BODY */
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #046E8F;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.submitBtn {
+    border: none;
+    background-color: #9c2c13;
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 2rem 2%;
+    width: 20%;
+    max-width: 20rem;
+}
+
+
+#main-container{
+    margin: 150px auto;
+    width: 900px;
+}
+
+.myCustomTable{
+    font-size: 1.2rem;
+    text-align: left;
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+
+}
+
+.myCustomTable th{
+    text-align: center;
+}
+
+th, td{
+    padding: 0.5rem;
+}
+
+thead{
+    background-color: #011D28;
+    border-bottom: solid 2px #034863;
+    color: white;
+}
+
+.myCustomTd{
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+.myCustomTable a{
+    color: black;
+}
+
+.myCustomTable a:hover{
+    color: darkblue;
+}
+
+.Title{
+    color: red;
+    font-size: 3rem;
+}
+
+.myCustomClickLinks a{
+    color: #9c2c13;
+}
+
+/* Add and Update Movie */
+
+.myCustomForm{
+    background: #fff;
+}
+
+.myCustomSubTitle{
+    padding-top: 4rem;
+}
+
+
+/* Footer */
+
+footer {
+	font-size: 0.9em;
+	padding: 1.5rem;
+	text-align: center;
+	background-color: #011D28;
+	color: white;
+	border: 3px solid black;
+	border-radius: 1em; 
+}

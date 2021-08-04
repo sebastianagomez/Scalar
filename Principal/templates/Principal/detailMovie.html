@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Movies Data{% endblock title %}</title>
+        <link rel="stylesheet" href="{% static 'Principal/styles.css' %}">
+    </head>
+<body class="intro">
+
+    <nav class="clearfix">
+        <img class="logo" alt="Logo Scalar" src="{% static 'Principal/img/logo.png' %}" />
+        <h1 class="myCustomNavTitle">Scalaction</h1>
+        <p><a class="myCustomLogOutP" href="{% url 'logout' %}">Log Out</a></p>
+        <img class="login" alt="Logo LogIn" src="{% static 'Principal/img/login.png' %}" /><a class="login myCustoma" href="{% url 'login' %}">.</a>
+    </nav>
+
+    <h1 class="myCustomSubTitle">Scalar Detail Movies</h1>   
+
+    {% block body %}
+
+    <table border="2" class="myCustomTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Movie Info</th>
+                <th>Director</th>
+                <th>Run Time</th>
+                <th>Leading Actor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ object.title }}</td>
+                <td>{{ object.rating }}</td>
+                <td>{{ object.movieInfo }}</td>
+                <td>{{ object.director }}</td>
+                <td>{{ object.runTime }}</td>
+                <td>{{ object.leadingActor }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    {% endblock body %}
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Register{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'Principal/styles.css' %}">
+</head>
+<body class="intro">
+	<div id="container" class="log-form">
+		<h2 class="myCustomTitleLogIn">REGISTER NOW</h2>
+		<form method="POST" action="{% url 'register' %}" class="register-form">    
+            {% csrf_token %}        
+			<!-- Username -->
+			<label for="name">Username:</label><input required type="name" name="username">
+			<!-- Password -->
+			<label for="username">Password:</label><input required type="password" name="password">
+			<!-- Confirm Password -->
+            <label for="username">Repeat Password:</label><input required type="password" name="confirmation">
+
+			<div id="lower">
+				<input type="submit" value="REGISTER" class="btn">
+			</div>
+		</form>		
+	</div>
+</body>
+</html>

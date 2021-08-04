@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LogIn{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'Principal/styles.css' %}">
+</head>
+<body class="intro">
+	<div id="container" class="log-form">
+		<h2 class="myCustomTitleLogIn">Login to your account</h2>
+		<form method="POST" action="{% url 'login' %}" class="register-form"> 
+            {% csrf_token %}           
+			<!-- Username -->
+			<label for="name">Username:</label><input required type="name" name="username">
+			<!-- Password -->
+			<label for="username">Password:</label><input required type="password" name="password">
+			<div id="lower">
+				<!-- Submit Button -->
+				<input type="submit" value="Login" class="btn">
+			</div>
+			<div id="lower" class="myCustomCreateAc">
+				<a href="{% url 'register' %}">Create Account</a>
+			</div>
+		</form>		
+	</div>
+</body>
+</html>
